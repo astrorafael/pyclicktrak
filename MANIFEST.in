@@ -1,0 +1,3 @@
+include versioneer.py
+include src/clicktrack/_version.py
+recursive-include files *
