@@ -29,7 +29,7 @@ CLASSIFIERS  = [
 
 PACKAGE_DATA = {}
 
-SCRIPTS = []
+SCRIPTS = ["scripts/clicktrack"]
 
 DATA_FILES  = []
 

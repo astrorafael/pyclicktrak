@@ -1,0 +1,17 @@
+#!/bin/bash
+# ----------------------------------------------------------------------
+# Copyright (c) 20121 astrorafael@gmail.com.
+#
+# See the LICENSE file for details
+# ----------------------------------------------------------------------
+
+ver=$(python -c"import sys; print(sys.version_info.major)")
+if [ $ver -eq 3 ]; then
+	PYTHON=$(which python3)
+elif [ $ver -eq 2 ]; then
+    PYTHON=$(which python)
+else 
+    echo "Unknown python version: $ver"
+fi
+
+${PYTHON} -m clicktrack "$@"
