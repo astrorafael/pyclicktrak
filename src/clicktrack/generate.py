@@ -98,7 +98,7 @@ def wav(options):
 	total_samples = int(round(sampling_freq * duration,0))
 	log.info(f"Each tick has {int(nsamples_per_tick)} whole samples and a reminder of {reminder} samples")
 	log.info(f"Needs {total_samples} samples for {duration} seconds(s)")
-	square_wave = make_square_wave(nsamples_per_tick, amplitude, duty_cycle)
+	square_wave = make_square_wave(nsamples_per_tick, amplitude, duty_cycle, bipolar)
 	packer = make_packer(options.depth)
 	log.info(f"Bit depth = {options.depth}, {bytes_per_sample} bytes/sample")
 	log.info(f"The resulting output waveform has a frequency of {frequency} Hz.")
