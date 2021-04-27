@@ -121,6 +121,7 @@ def createParser():
 	parser_wav.add_argument('-d','--depth',  type=int, choices=[16,24], default=16, help='Sample bit depth')
 	parser_wav.add_argument('-w','--width', type=int, choices=[5,10,25,50], default=50, help='pulse width in %%')
 	parser_wav.add_argument('--bipolar', action='store_true',  help='generate bipolar wave')
+	parser_wav.add_argument('--stereo', action='store_true',  help='stereo file')
 	durex = parser_wav.add_mutually_exclusive_group(required=True)
 	durex.add_argument('--minutes', type=mktime, metavar='<MM:SS>', default=None, help='Click track duration in minutes')
 	durex.add_argument('--beats',   type=int, default=None, help='Click track duration in beats (quarter notes)')
